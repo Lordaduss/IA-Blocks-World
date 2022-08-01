@@ -1,3 +1,4 @@
+import { isGeneratorFunction } from "util/types";
 import Tree from "./Tree/Tree";
 import TreeNode from "./Tree/TreeNode";
 
@@ -10,7 +11,7 @@ function mapPossibilities(): void{
         var i: number = 1;
 
         if(p1[2]>0){
-            new TreeNode() //p2[0] = p1[2]
+            Tree.insert() //p2[0] = p1[2]
             new TreeNode() //p3[0] = p1[2]
         }else if(p1[1]>0){
             new TreeNode() //

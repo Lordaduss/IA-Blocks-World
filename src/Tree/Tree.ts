@@ -5,8 +5,8 @@ export default class Tree {
     
     root: TreeNode
 
-    constructor(key=1,p1,p2,p3, parent=null, children=null) {
-      this.root = new TreeNode(key,p1,p2,p3, parent, children);
+    constructor(block11, block12, block13, block21, block22, block23, block31, block32, block33) {
+      this.root = new TreeNode(1,block11, block12, block13, block21, block22, block23, block31, block32, block33, null, null);
     }
   
     *preOrderTraversal(node = this.root) {
@@ -27,7 +27,7 @@ export default class Tree {
       yield node;
     }
   
-    insert(parentNodeKey, key, value = key) {
+    static insert(parentNodeKey, key, value = key): void {
       for (let node of this.preOrderTraversal()) {
         if (node.key === parentNodeKey) {
           node.children.push(new TreeNode(key, value, node));

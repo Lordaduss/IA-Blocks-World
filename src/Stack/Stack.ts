@@ -2,7 +2,7 @@ class Stack<T> {
     private array: T[] = [];
   
     pop(): T | undefined {
-      if (this.isEmpty()) throw new EmptyStackException();
+      if (this.isEmpty()) throw new Error();
   
       return this.array.pop();
     }
@@ -12,7 +12,7 @@ class Stack<T> {
     }
   
     peek(): T {
-      if (this.isEmpty()) throw new EmptyStackException();
+      if (this.isEmpty()) throw new Error();
   
       return this.array[this.array.length - 1];
     }
